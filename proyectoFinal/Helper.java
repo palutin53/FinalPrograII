@@ -24,16 +24,14 @@ public class Helper{
         return JOptionPane.showInputDialog(null,s);
     }
     
-    public static int inputInt(int i)
+    public static int inputInt(String s)
     {
-        i = Integer.parseInt(JOptionPane.showInputDialog(null, i));
-        return i;
+        return Integer.parseInt(JOptionPane.showInputDialog(null, s));
     }
     
-    public double inputDouble(double d)
+    public static double inputDouble(String s)
     {
-        d = Double.parseDouble(JOptionPane.showInputDialog(null, d));
-        return d;
+        return Double.parseDouble(JOptionPane.showInputDialog(null, s));
     }
     
     public int menuCajeros(int opcion)
