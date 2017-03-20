@@ -47,9 +47,10 @@ public abstract class Producto
         return precio;
     }
     
-    public void setPrecio()
+    public void setPrecio(double precio)
     {
-        precio = Double.parseDouble(Helper.input("Ingrese Precio: "));
+        precio = Helper.inputDouble("Ingrese Precio: ");
+        this.precio = precio;
     }
     
     public String getNombre()
@@ -71,6 +72,7 @@ public abstract class Producto
     public void setMarca(String marca)
     {
         marca = Helper.input("Ingrese Marca: ");
+        this.marca = marca;
     }
     
     public int getCantidad()
@@ -80,6 +82,7 @@ public abstract class Producto
     
     public void setCantidad(int cantidad)
     {
-        cantidad = Integer.parseInt(Helper.input("Ingrese Cantidad: "));
+        cantidad = Helper.inputInt("Ingrese Cantidad: ");
+        this.cantidad = cantidad;
     }
 }
