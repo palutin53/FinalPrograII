@@ -15,6 +15,7 @@ import java.text.DecimalFormat;
 
 public class Helper{
     public static DecimalFormat df = new DecimalFormat("#,##0.00"); 
+    public static StringBuilder sb = new StringBuilder();
     
     public static void show(String s){
         JOptionPane.showMessageDialog(null,s);
@@ -34,21 +35,37 @@ public class Helper{
         return Double.parseDouble(JOptionPane.showInputDialog(null, s));
     }
     
-    public int menuCajeros(int opcion)
+     public static int menuCajeros()
     {
-        opcion = Integer.parseInt(input("Ingrese la gestión.\n\n 1.- Venta\n 2.- Devolución\n 3.- Salir: \n\n"));
-        return opcion;
+        sb.append(">>>>>Menú Opciones<<<<<\n");
+        sb.append(" 1.- Venta\n");
+        sb.append(" 2.- Devolución\n");
+        sb.append(" 3.- Salir\n");
+        return Integer.parseInt(JOptionPane.showInputDialog(null, sb.toString() + "\n\nSeleccione su opción: "));
     }
-    
+        
     public int menuAdmin(int opcion)
     {
-        opcion = Integer.parseInt(input("Ingrese la gestión.\n\n 1.- Venta\n 2.- Devolución\n 3.- Administración \n 4.- Salir \n\n"));
-        return opcion;
+        sb.append(">>>>>Menú Opciones<<<<<\n");
+        sb.append(" 1.- Venta\n");
+        sb.append(" 2.- Devolución\n");
+        sb.append(" 3.- Administración\n");
+        sb.append(" 4.- Salir\n");
+        return Integer.parseInt(JOptionPane.showInputDialog(null, sb.toString() + "\n\nSeleccione su opción: "));
     }
     
     public int subMenuAdmin(int opcion)
     {
-        opcion = Integer.parseInt(input("Ingrese la gestión.\n\n 1.- Registrar Cajero\n 2.- Eliminar Cajeros\n 3.- Ingresar Productos\n4.- Atrás \n\n"));
-        return opcion;
+        sb.append(">>>>>Menú Opciones<<<<<\n");
+        sb.append(" 1.- Registrar Cajeros\n");
+        sb.append(" 2.- Eliminar Cajeros\n");
+        sb.append(" 3.- Ingresar Productos\n");
+        sb.append(" 4.- Atrás\n");
+        return Integer.parseInt(JOptionPane.showInputDialog(null, sb.toString() + "\n\nSeleccione su opción: "));
+    }
+    
+    public static void clearOptions()
+    {
+        sb.setLength(0);
     }
 }
