@@ -15,11 +15,14 @@ import proyectoFinal.Helper;
 
 public abstract class Producto
 {
+    private static StringBuilder  sb = new StringBuilder();
+    
     protected String categoria;
     protected double precio;
     protected String nombre;
     protected String marca;
     protected int cantidad;
+    protected int codigo;
     
     public Producto(){}
     
@@ -83,6 +86,17 @@ public abstract class Producto
     public void setCantidad(int cantidad)
     {
         cantidad = Helper.inputInt("Ingrese Cantidad: ");
+        this.cantidad = cantidad;
+    }
+    
+    public int getCodigo()
+    {
+        return codigo;
+    }
+    
+    public void setCodigo(int cantidad)
+    {
+        cantidad = Helper.inputInt("Ingrese Codigo: ");
         this.cantidad = cantidad;
     }
 }
